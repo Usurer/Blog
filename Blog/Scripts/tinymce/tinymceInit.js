@@ -1,6 +1,4 @@
-﻿alert(10);
-
-tinymce.init({
+﻿tinymce.init({
     selector: 'textarea',
     height: 500,
     menubar: false,

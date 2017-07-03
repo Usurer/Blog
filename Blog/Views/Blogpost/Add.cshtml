@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<HtmlString>
+
 @{
     ViewBag.Title = "Add";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -15,6 +16,16 @@
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" class="btn btn-default js-submitBlogpost" value="Submit" />
             </div>
+        </div>
+    }
+</div>
+
+<div>
+    <h3>Existing posts</h3>
+    @foreach(var post in Model)
+    {
+        <div>
+            @post
         </div>
     }
 </div>
