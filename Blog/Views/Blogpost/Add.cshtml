@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add</h2>
+
+<div>
+    @using (Html.BeginForm("Add", "Blogpost", FormMethod.Post, new { @class = "form-horizontal js-editor-form" }))
+    {
+        @Html.Partial("_TinyMCE")
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn btn-default js-submitBlogpost" value="Submit" />
+            </div>
+        </div>
+    }
+</div>

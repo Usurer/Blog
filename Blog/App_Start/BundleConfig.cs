@@ -8,6 +8,8 @@ namespace Blog
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            /* SCRIPTS */
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
@@ -28,11 +30,14 @@ namespace Blog
                       "~/Scripts/tinymce/themes/modern/theme.min.js",
                       "~/Scripts/tinymce/tinymceInit.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/app").Include(
+                        "~/Scripts/app.js"));
+
+            /* STYLES */
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
-
-           
         }
     }
 }
