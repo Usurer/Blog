@@ -298,4 +298,6 @@ __pycache__/
 packages/
 Blog/bin/
 Blog/obj/
+Blog/out/
+Blog/Styles/css/
 node_modules/
