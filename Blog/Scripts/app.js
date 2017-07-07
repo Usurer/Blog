@@ -7,10 +7,12 @@
             $.ajax({
                 type: 'POST',
                 url: '/Blogpost/Add',
-                data: { data: content }
+                data: { data: content },
+                success: function () {
+                    // TODO: This won't put newly added content on a page. So either return it from Action and push into DOM, or reload the page
+                    tinymce.editors[0].setContent();                
+                }
             });
-
-            //$.post("/Blogpost/Add", { content: JSON.stringify(content) }, "json);
 
             e.preventDefault();
             e.stopPropagation();

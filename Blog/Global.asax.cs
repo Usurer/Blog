@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Blog.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,8 +9,10 @@ using System.Web.Routing;
 
 namespace Blog
 {
-    public class MvcApplication : System.Web.HttpApplication
+    public class MvcApplication : HttpApplication
     {
+        public static BlogContext DbContext { get; private set; }
+
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
@@ -17,5 +20,22 @@ namespace Blog
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        public override void Init()
+        {
+            BeginRequest += MvcApplication_BeginRequest;
+            EndRequest += MvcApplication_EndRequest;
+        }
+
+        private void MvcApplication_BeginRequest(object sender, EventArgs e)
+        {
+            DbContext = new BlogContext();
+        }
+
+        private void MvcApplication_EndRequest(object sender, EventArgs e)
+        {
+            DbContext.Dispose();
+        }
+
     }
 }

@@ -10,21 +10,9 @@ namespace Blog.Controllers
 {
     public class BlogpostController : Controller
     {
-        public class Context : DbContext
-        {
-
-        }
-
         public ActionResult Add()
         {
-            var model = new List<HtmlString>();
-
-            using (var context = new BlogContext())
-            {
-                var posts = context.Posts.Select(x => x.Text).ToArray();
-                model.AddRange(posts.Select(x => new HtmlString(x)));
-            }
-
+            var model = GetPosts();
             return View(model);
         }
 
@@ -32,14 +20,28 @@ namespace Blog.Controllers
         [ValidateInput(false)]
         public ActionResult Add(string data)
         {
-            using (var context = new BlogContext())
+            var post = new Post()
             {
-                var post = new Post() { Text = data };
-                context.Posts.Add(post);
-                context.SaveChanges();
-            }
+                Text = data
+            };
 
-            return View();
+            MvcApplication.DbContext.Posts.Add(post);
+            MvcApplication.DbContext.SaveChanges();
+
+            var model = GetPosts();
+
+            return View(model);
+        }
+
+        private List<HtmlString> GetPosts()
+        {
+            return MvcApplication
+                .DbContext
+                .Posts
+                .Select(x => x.Text)
+                .ToArray()
+                .Select(x => new HtmlString(x))
+                .ToList();
         }
     }
 }
