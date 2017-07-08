@@ -1,0 +1,42 @@
+﻿@import "Bootstrap/stylesheets/bootstrap/variables";
+
+@media screen and (min-width: $screen-sm) {
+    
+    .mainHeader__navList__wrapper {
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+    }
+
+    .mainHeader__navList {
+        width: 100%;
+        text-align: right;
+    }
+
+    .mainHeader__navList > li {
+        width: 33%;
+    }
+}
+
+@media screen and (max-width: $screen-sm - 1) {
+
+    .mainHeader__brand {
+        text-align: center;
+        width: 100%;
+    }
+
+    .mainHeader__navList__wrapper {
+        text-align: center;
+    }
+
+    .mainHeader__navList {
+        display: inline-block;
+        width: 75%;
+    }
+
+    .mainHeader__navList > li {
+        display: block;
+        float: left;
+        width: 33%;
+    }
+}

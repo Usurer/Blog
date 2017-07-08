@@ -35,9 +35,9 @@ namespace Blog
 
             /* STYLES */
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/layout.css"));
+            bundles.Add(new StyleBundle("~/Styles/css").Include(
+                      "~/Styles/css/bootstrap.css",
+                      "~/Styles/css/layout.css"));
         }
     }
 }

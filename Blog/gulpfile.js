@@ -6,7 +6,7 @@ var flatten = require('gulp-flatten');
 var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
 
-gulp.task('default', ['sass', 'minify']);
+gulp.task('default', ['sass', 'minify', 'watch']);
 
 gulp.task('sass', function () {
     return gulp.src('Styles/**/*.scss')
