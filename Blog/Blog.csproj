@@ -416,6 +416,7 @@
     <Content Include="Styles\Bootstrap\stylesheets\_bootstrap-compass.scss" />
     <Content Include="Styles\Bootstrap\stylesheets\_bootstrap-mincer.scss" />
     <Content Include="Styles\Bootstrap\stylesheets\_bootstrap-sprockets.scss" />
+    <Content Include="Styles\_header.scss" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
