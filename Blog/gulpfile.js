@@ -19,6 +19,7 @@ gulp.task('minify', function () {
     return gulp.src(['Styles/css/*.css', '!Styles/css/*.min.css'])
         .pipe(sass())
         .pipe(flatten())
+        .pipe(cleanCSS())
         .pipe(rename({
             suffix: '.min'
         }))
