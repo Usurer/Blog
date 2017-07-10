@@ -1,5 +1,10 @@
 ﻿@import "Bootstrap/stylesheets/bootstrap/variables";
 
+.mainHeader__brand {
+    margin: 0;
+    text-transform: uppercase;
+}
+
 @media screen and (min-width: $screen-sm) {
     
     .mainHeader__navList__wrapper {
