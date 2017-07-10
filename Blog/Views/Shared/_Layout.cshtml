@@ -32,37 +32,14 @@
     </nav>
 
     <div class="container">
-        <div class="row" style="background-color:grey">
-            @*left indent*@
-            <div class="col-sm-2" style="background-color:green"></div>
-
-            @*content*@
-            <div class="col-sm-8" style="background-color:yellow">
-                <section>
-                    <h3>Some Title</h3>
-                    <p>Content</p>
-                </section>
-            </div>
-            
-            @*right indent*@
-            <div class="col-sm-2" style="background-color:red"></div>
-        </div>
-
         <div class="row">
-            <div class="col-sm-4" style="background-color:red">
-                a
-            </div>
-            <div class="col-sm-4" style="background-color:green">
-                b
-            </div>
-            <div class="col-sm-4" style="background-color:#ffd800">
-                c
+            <div class="col-xs-12">
+                @RenderBody()
             </div>
         </div>
     </div>
 
-    @RenderBody()
-
+    
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/tinymce")

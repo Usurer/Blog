@@ -187,6 +187,7 @@
     <Content Include="App_Data\Data_log.ldf">
       <DependentUpon>Data.mdf</DependentUpon>
     </Content>
+    <Content Include="Scripts\contentEditor.js" />
     <Content Include="Styles\Bootstrap\fonts\bootstrap\glyphicons-halflings-regular.svg" />
     <Content Include="Styles\Bootstrap\README.txt" />
     <Content Include="Styles\css\bootstrap.css" />
@@ -289,7 +290,7 @@
     <Content Include="Scripts\vendor\tinymce\themes\inlite\theme.min.js" />
     <Content Include="Scripts\vendor\tinymce\themes\modern\theme.min.js" />
     <Content Include="Scripts\vendor\tinymce\tinymce.min.js" />
-    <Content Include="Scripts\vendor\tinymce\tinymceInit.js" />
+    <Content Include="Scripts\tinymceInit.js" />
     <Content Include="Styles\css\layout.min.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

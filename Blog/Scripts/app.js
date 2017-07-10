@@ -1,4 +1,7 @@
-﻿(function () {
+﻿if (typeof BlogApp === 'undefined')
+    BlogApp = {};
+
+(function () {
     $(document).ready(function () {
         var form = $('.js-editor-form');
         form.on('submit', function (e) {
