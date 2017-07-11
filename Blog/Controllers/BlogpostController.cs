@@ -30,7 +30,7 @@ namespace Blog.Controllers
 
             var model = GetPosts();
 
-            return View(model);
+            return RedirectToAction("Add");
         }
 
         private List<HtmlString> GetPosts()
