@@ -1,3 +1,4 @@
+/// <binding ProjectOpened='watch' />
 'use strict';
 
 var gulp = require('gulp');
