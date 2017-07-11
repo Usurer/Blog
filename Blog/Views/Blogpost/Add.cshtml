@@ -8,7 +8,7 @@
 <h2>Add</h2>
 
 <div>
-    @using (Html.BeginForm("Add", "Blogpost", FormMethod.Post, new { @class = "form-horizontal js-editor-form" }))
+    @using (Html.BeginForm("Add", "Blogpost", FormMethod.Post, new { @class = "form-horizontal js-editor-form hidden" }))
     {
         @Html.Partial("_TinyMCE")
 

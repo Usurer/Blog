@@ -1,0 +1,15 @@
+﻿.animation-show {
+    display: block;
+    animation-duration: 0.5s;
+    animation-name: show;
+}
+
+@keyframes show {
+    from { 
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
