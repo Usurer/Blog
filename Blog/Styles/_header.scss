@@ -1,8 +1,24 @@
 ﻿@import "Bootstrap/stylesheets/bootstrap/variables";
 
+$navigationLinksAmount: 4;
+
 .mainHeader__brand {
     margin: 0;
     text-transform: uppercase;
+}
+
+.mainHeader__navList > li {
+    width: 100% / $navigationLinksAmount;
+    
+    // Reset Bootstrap styles.
+    a {
+        padding: 0;
+        line-height: inherit;
+
+        :visited {
+            color: inherit;
+        }
+    }
 }
 
 @media screen and (min-width: $screen-sm) {
@@ -19,7 +35,7 @@
     }
 
     .mainHeader__navList > li {
-        width: 33%;
+        width: 100% / $navigationLinksAmount;
     }
 }
 
@@ -42,6 +58,6 @@
     .mainHeader__navList > li {
         display: block;
         float: left;
-        width: 33%;
+        width: 100% / $navigationLinksAmount;
     }
 }
