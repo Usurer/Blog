@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var isAuthenticated = User.Identity.IsAuthenticated;
+}
+
+<!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="utf-8" />
@@ -19,11 +24,19 @@
                             <h2 class="navbar-brand mainHeader__brand">Of This And That</h2>
                         </div>
                         <div class="col-xs-12 col-sm-4 mainHeader__navList__wrapper">
-                            <ul class="nav navbar-nav mainHeader__navList">
+                            <ul class="nav navbar-nav  @(isAuthenticated ? "mainHeader__navList__loggedIn" : "mainHeader__navList")">
                                 <li>About</li>
                                 <li>Blog</li>
                                 <li>Stuff</li>
-                                <li>@Html.ActionLink("Edit", "Add", "Blogpost")</li>
+                                @if (isAuthenticated)
+                                {
+                                    <li>@Html.ActionLink("Edit", "Add", "Blogpost")</li>
+                                    @Ajax.ActionLink("Log Off", "Logoff", "Account", null, new AjaxOptions() { HttpMethod = "POST" })
+                                }
+                                else
+                                {
+                                    <li>@Html.ActionLink("Login", "Login", "Account")</li>
+                                }
                             </ul>
                         </div>
                     </div>

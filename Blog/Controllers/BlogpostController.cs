@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace Blog.Controllers
 {
+    [Authorize]
     public class BlogpostController : Controller
     {
         public ActionResult Add()

@@ -7,9 +7,9 @@ $navigationLinksAmount: 4;
     text-transform: uppercase;
 }
 
-.mainHeader__navList > li {
+.mainHeader__navList > li,
+.mainHeader__navList__loggedIn > li {
     width: 100% / $navigationLinksAmount;
-    
     // Reset Bootstrap styles.
     a {
         padding: 0;
@@ -37,6 +37,10 @@ $navigationLinksAmount: 4;
     .mainHeader__navList > li {
         width: 100% / $navigationLinksAmount;
     }
+
+    .mainHeader__navList__loggedIn > li {
+        width: 100% / ($navigationLinksAmount + 1);
+    }
 }
 
 @media screen and (max-width: $screen-sm - 1) {
@@ -59,5 +63,11 @@ $navigationLinksAmount: 4;
         display: block;
         float: left;
         width: 100% / $navigationLinksAmount;
+    }
+
+    .mainHeader__navList__loggedIn > li {
+        display: block;
+        float: left;
+        width: 100% / ($navigationLinksAmount + 1);
     }
 }
