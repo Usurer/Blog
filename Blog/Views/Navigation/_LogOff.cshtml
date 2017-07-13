@@ -1,0 +1,7 @@
+﻿@using (Html.BeginForm("Logoff", "Account"))
+{
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-link">
+        Log Off
+    </button>
+}

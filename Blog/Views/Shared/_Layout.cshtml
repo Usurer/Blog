@@ -31,7 +31,8 @@
                                 @if (isAuthenticated)
                                 {
                                     <li>@Html.ActionLink("Edit", "Add", "Blogpost")</li>
-                                    @Ajax.ActionLink("Log Off", "Logoff", "Account", null, new AjaxOptions() { HttpMethod = "POST" })
+                                    <li>@Html.Action("LogOff", "Navigation")</li>
+                                    //@Ajax.ActionLink("Log Off", "Logoff", "Account", null, new AjaxOptions() { HttpMethod = "POST" })
                                 }
                                 else
                                 {

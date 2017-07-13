@@ -171,6 +171,7 @@
     <Compile Include="Controllers\BlogpostController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NavigationController.cs" />
     <Compile Include="Data\BlogContext.cs" />
     <Compile Include="Data\Post.cs" />
     <Compile Include="Global.asax.cs">
@@ -419,6 +420,7 @@
     <Content Include="Styles\Bootstrap\stylesheets\_bootstrap-sprockets.scss" />
     <Content Include="Styles\_header.scss" />
     <Content Include="Styles\_editor.scss" />
+    <Content Include="Views\Navigation\_LogOff.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

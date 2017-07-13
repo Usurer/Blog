@@ -19,6 +19,17 @@ $navigationLinksAmount: 4;
             color: inherit;
         }
     }
+
+    button {
+        padding:0;
+        line-height:inherit;
+    }
+}
+
+.mainHeader__navList__wrapper {
+    /*position: absolute;
+    bottom: 10px;
+    right: 0;*/
 }
 
 @media screen and (min-width: $screen-sm) {
@@ -29,7 +40,8 @@ $navigationLinksAmount: 4;
         right: 0;
     }
 
-    .mainHeader__navList {
+    .mainHeader__navList,
+    .mainHeader__navList__loggedIn {
         width: 100%;
         text-align: right;
     } 
@@ -54,7 +66,8 @@ $navigationLinksAmount: 4;
         text-align: center;
     }
 
-    .mainHeader__navList {
+    .mainHeader__navList,
+    mainHeader__navList__loggedIn {
         display: inline-block;
         width: 75%;
     }
