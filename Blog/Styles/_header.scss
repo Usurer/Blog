@@ -1,6 +1,6 @@
 ﻿@import "Bootstrap/stylesheets/bootstrap/variables";
 
-$navigationLinksAmount: 4;
+$navigationLinksAmount: 3;
 
 .mainHeader__brand {
     margin: 0;
@@ -21,8 +21,8 @@ $navigationLinksAmount: 4;
     }
 
     button {
-        padding:0;
-        line-height:inherit;
+        padding: 0;
+        line-height: inherit;
     }
 }
 
@@ -42,7 +42,7 @@ $navigationLinksAmount: 4;
 
     .mainHeader__navList,
     .mainHeader__navList__loggedIn {
-        width: 100%;
+        width: 75%;
         text-align: right;
     } 
 
@@ -82,5 +82,29 @@ $navigationLinksAmount: 4;
         display: block;
         float: left;
         width: 100% / ($navigationLinksAmount + 1);
+    }
+}
+
+.editorMenu__wrapper {
+    float: left;
+    position: absolute;
+    right: 0px;
+
+    .mainHeader__navList__editor {
+        position: absolute;
+        background: linear-gradient(180deg, $navbar-default-bg, darken($navbar-default-bg, 5%));
+        z-index: 10;
+        display: none;
+
+        li {
+            width: 100%;
+        }
+    }
+
+    &:hover {
+        .mainHeader__navList__editor {
+            display: block;
+            box-shadow: 2px 2px 2px $gray-light;
+        }
     }
 }

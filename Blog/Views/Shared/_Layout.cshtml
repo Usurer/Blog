@@ -20,26 +20,20 @@
                 @* I have to keep this wrapper to use absolute positioning for a child elements - it requires a parent to have position different from static and row is static =\ *@
                 <div class="col-xs-12">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-8">
+                        <div class="col-xs-12 col-sm-7">
                             <h2 class="navbar-brand mainHeader__brand">Of This And That</h2>
                         </div>
-                        <div class="col-xs-12 col-sm-4 mainHeader__navList__wrapper">
-                            <ul class="nav navbar-nav  @(isAuthenticated ? "mainHeader__navList__loggedIn" : "mainHeader__navList")">
+                        <div class="col-xs-12 col-sm-5 mainHeader__navList__wrapper">
+                            <ul class="nav navbar-nav mainHeader__navList">
                                 <li>About</li>
                                 <li>Blog</li>
                                 <li>Stuff</li>
-                                @if (isAuthenticated)
-                                {
-                                    <li>@Html.ActionLink("Edit", "Add", "Blogpost")</li>
-                                    <li>@Html.Action("LogOff", "Navigation")</li>
-                                    //@Ajax.ActionLink("Log Off", "Logoff", "Account", null, new AjaxOptions() { HttpMethod = "POST" })
-                                }
-                                else
-                                {
-                                    <li>@Html.ActionLink("Login", "Login", "Account")</li>
-                                }
                             </ul>
+                            @Html.Partial("/Views/Navigation/_EditorMenu.cshtml")
                         </div>
+                        @*<div class="col-xs-12 col-sm-1 mainHeader__navList__wrapper">
+                            @Html.Partial("/Views/Navigation/_EditorMenu.cshtml")
+                        </div>*@
                     </div>
                 </div>
             </div>

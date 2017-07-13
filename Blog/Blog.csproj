@@ -193,6 +193,7 @@
     <Content Include="Styles\Bootstrap\README.txt" />
     <Content Include="Styles\css\bootstrap.css" />
     <Content Include="Styles\css\bootstrap.min.css" />
+    <Content Include="Styles\fonts\bootstrap\glyphicons-halflings-regular.svg" />
     <Content Include="Styles\css\layout.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -421,6 +422,11 @@
     <Content Include="Styles\_header.scss" />
     <Content Include="Styles\_editor.scss" />
     <Content Include="Views\Navigation\_LogOff.cshtml" />
+    <Content Include="Styles\fonts\bootstrap\glyphicons-halflings-regular.eot" />
+    <Content Include="Styles\fonts\bootstrap\glyphicons-halflings-regular.ttf" />
+    <Content Include="Styles\fonts\bootstrap\glyphicons-halflings-regular.woff" />
+    <Content Include="Styles\fonts\bootstrap\glyphicons-halflings-regular.woff2" />
+    <Content Include="Views\Navigation\_EditorMenu.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

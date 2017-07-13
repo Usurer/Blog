@@ -1,0 +1,23 @@
+﻿@{
+    var isAuthenticated = User.Identity.IsAuthenticated;
+}
+
+<div class="editorMenu__wrapper">
+    <span class="glyphicon glyphicon-pencil"></span>
+    <ul class="nav navbar-nav mainHeader__navList__editor">
+        @if (isAuthenticated)
+        {
+            <li>@Html.ActionLink("Edit", "Add", "Blogpost")</li>
+            <li>@Html.Action("LogOff", "Navigation")</li>
+        }
+        else
+        {
+            <li>
+                @Html.ActionLink("Login", "Login", "Account")
+            </li>
+        }
+    </ul>
+</div>
+
+
+
