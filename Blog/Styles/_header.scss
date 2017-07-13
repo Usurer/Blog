@@ -1,6 +1,6 @@
 ﻿@import "Bootstrap/stylesheets/bootstrap/variables";
 
-$navigationLinksAmount: 3;
+$navigationLinksAmount: 4;
 
 .mainHeader__brand {
     margin: 0;
@@ -11,17 +11,17 @@ $navigationLinksAmount: 3;
 .mainHeader__navList__loggedIn > li {
     width: 100% / $navigationLinksAmount;
     // Reset Bootstrap styles.
-    a {
+    /*a {
         padding: 0;
         line-height: inherit;
 
         :visited {
             color: inherit;
         }
-    }
+    }*/
 
     button {
-        padding: 0;
+        /*padding: 0;*/
         line-height: inherit;
     }
 }
@@ -86,18 +86,23 @@ $navigationLinksAmount: 3;
 }
 
 .editorMenu__wrapper {
-    float: left;
-    position: absolute;
-    right: 0px;
+   
 
     .mainHeader__navList__editor {
         position: absolute;
+        left: 50%;
         background: linear-gradient(180deg, $navbar-default-bg, darken($navbar-default-bg, 5%));
         z-index: 10;
+        width: 100%;
         display: none;
 
         li {
             width: 100%;
+            text-align: left;
+        }
+
+        a, button {
+            padding-left: 5%;
         }
     }
 
