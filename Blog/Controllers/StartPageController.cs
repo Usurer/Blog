@@ -16,7 +16,11 @@ namespace Blog.Controllers
                 .DbContext
                 .Posts
                 .ToArray()
-                .Select(x => new PostViewModel() { Text = new HtmlString(x.Text) } )
+                .Select(x => new PostViewModel
+                {
+                    Text = new HtmlString(x.Text),
+                    Title = x.Title,
+                })
                 .ToList();
 
             return View(posts);

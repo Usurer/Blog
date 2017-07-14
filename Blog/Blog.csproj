@@ -186,6 +186,10 @@
     <Compile Include="Migrations\201707141327402_AddPostTimestamps.Designer.cs">
       <DependentUpon>201707141327402_AddPostTimestamps.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707141336275_PostAddTitle.cs" />
+    <Compile Include="Migrations\201707141336275_PostAddTitle.Designer.cs">
+      <DependentUpon>201707141336275_PostAddTitle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -439,6 +443,7 @@
     <Content Include="Styles\fonts\bootstrap\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Navigation\_EditorMenu.cshtml" />
     <Content Include="Views\StartPage\Posts.cshtml" />
+    <Content Include="Styles\_posts.scss" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201707030839354_InitialCreate.resx">
@@ -446,6 +451,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201707141327402_AddPostTimestamps.resx">
       <DependentUpon>201707141327402_AddPostTimestamps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707141336275_PostAddTitle.resx">
+      <DependentUpon>201707141336275_PostAddTitle.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

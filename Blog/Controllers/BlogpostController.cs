@@ -19,15 +19,16 @@ namespace Blog.Controllers
 
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult Add(string data)
+        public ActionResult Add(string title, string data)
         {
-            if (string.IsNullOrWhiteSpace(data))
+            if (string.IsNullOrWhiteSpace(data) || string.IsNullOrWhiteSpace(title))
             {
-                return RedirectToAction("Add");
+                return View("Error");
             }
             
             var post = new Post()
             {
+                Title = title,
                 Text = data,
                 Created = DateTime.Now,
                 LastChanged = DateTime.Now,

@@ -4,3 +4,12 @@
     ViewBag.Title = "Of This And That";
 }
 
+@foreach (var post in Model)
+{
+    <article class="posts__post__wrapper">
+        <h3>
+            @post.Title
+        </h3>
+        @post.Text
+    </article>
+}

@@ -7,6 +7,8 @@ namespace Blog.Models
 {
     public class PostViewModel
     {
+        public string Title { get; set; }
+
         public HtmlString Text { get; set; }
     }
 }

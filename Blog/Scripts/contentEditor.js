@@ -15,7 +15,7 @@
 
         function pushPreview() {
             var data = getEditorContent();
-            var container = getPreviewContainer()
+            var container = getPreviewContainer();
             container.html(data);
         }
 
