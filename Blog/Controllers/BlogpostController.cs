@@ -21,15 +21,20 @@ namespace Blog.Controllers
         [ValidateInput(false)]
         public ActionResult Add(string data)
         {
+            if (string.IsNullOrWhiteSpace(data))
+            {
+                return RedirectToAction("Add");
+            }
+            
             var post = new Post()
             {
-                Text = data
+                Text = data,
+                Created = DateTime.Now,
+                LastChanged = DateTime.Now,
             };
 
             MvcApplication.DbContext.Posts.Add(post);
             MvcApplication.DbContext.SaveChanges();
-
-            var model = GetPosts();
 
             return RedirectToAction("Add");
         }
