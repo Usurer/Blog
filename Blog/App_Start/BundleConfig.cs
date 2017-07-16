@@ -28,11 +28,12 @@ namespace Blog
             bundles.Add(new ScriptBundle("~/bundles/tinymce").Include(
                 "~/Scripts/vendor/tinymce/tinymce.min.js",
                 "~/Scripts/vendor/tinymce/themes/modern/theme.min.js",
-                "~/Scripts/tinymceInit.js"));
+                "~/Scripts/js/tinymceInit.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
-                "~/Scripts/contentEditor.js",
-                "~/Scripts/app.js"));
+                "~/Scripts/js/contentEditor.js",
+                "~/Scripts/js/app.js",
+                "~/Scripts/js/testTypeScript.js"));
 
             /* STYLES */
 
